@@ -1,0 +1,14 @@
+Fourier Transform with python
+This experiment needs scipy and matplotlib.
+
+When looking into the documentation, you may come accross two packages:
+scipy.fft
+scipy.fftpack
+
+scipy.fft is newer and is preferred over scipy.fftpack.
+
+1) signal data
+2)  normalization, or scaling the signal to fit into the target format. 
+3) 
+
+https://realpython.com/python-scipy-fft/

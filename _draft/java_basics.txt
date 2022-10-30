@@ -1,0 +1,61 @@
+Java under the hood.
+
+Computer languages are a middleman between human instructions and the
+instructions that a machine can understand. Java language is present in a 
+file called source code and are characterized by the extention '.java'. 
+
+The process to transform the source code to the machine code is called 
+compilation. It transforms the instructions into 1's and 0's to be read by the
+machine. But, compiled code is machine specific, which means that a
+code compiled to a Mac can only be read by a Mac, not by a Windows or Linux 
+system.
+
+In Java, the solution is to compile to an intermediary state called byte-code, 
+which has the extention '.class'. Then, this file is translated to machine code
+by Java Virtual Machine (JVM). This entity is called a virtual machine because
+simulates a physical machine and is able to run programs, manage process, 
+memory, files, without denpending on hardware. 
+It's like JVM works under the hood with support functions such as 
+cleaning the memory once it has too much "trash", and execute instructions. 
+
+JVM comes in a pack called Java Development Kit (JDK), which has tools to 
+help us code as well as Java Runtime Environment (JRE), a compound of 
+libraries and toolkits to compile byte-code into machine code. 
+
+Let's start with a simple example. 
+Open a text app like notepad++ or similiar text editor and save the file with
+the name 'Main.java'.
+
+The basic instructions for a java code has the following text:
+''' ~Java
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("hello!");
+  }
+}
+'''
+
+This code only writes "hello!" in the prompt. 
+
+The java language lay us into an Object Oriented Programming paradigm from
+the start. OOP in short. Put it simple, we have to develop apps inside entities
+called classes, with codename 'class' before it. The class is subdivided into 
+blocks called methods that execute one specific function. What we run when 
+running a java file is inside the 'public static void main(String[] args)' 
+method in the Main class. All the code goes inside the curly brackets. The 
+words before the name 'main' always has instructions about the access of this 
+block code and what kind of element does it return.
+
+It's interesting to run this code Main.java in the command line to understand 
+what an IDE such as Netbeans does for us. For example, open up the prompt in 
+windows and search for the folder where you saved the Main.java. Then, type:
+''' ~prompt
+javac Main.java
+java Main 
+'''
+The word 'javac' calls the java compiler to transform Main.java into 
+Main.class file, and 'java' calls the JVM to compile the byte-code Main.Class
+into the machine code.   
+
+This simple steps are ommited from the user in the IDEs because it aims to 
+facilitate 

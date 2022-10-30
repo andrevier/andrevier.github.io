@@ -1,0 +1,27 @@
+Virtual environment for python projects
+
+By default, Python interpreter runs in its own global environment. Therefore, any package that we install or delete affects the global environment and all programs that we run.
+
+Even though working in the global environment is beginner friendly, using it with complex projects can become difficult to test the application. Also, global environment can become crowded with time. 
+
+Setting up a virtual environment (venv) for a project means to create a folder that contains a copy of an interpreter for that purpose. For example, any package we install in an venv is installed in the venv folder and when we run a Python file in this venv we run with this configuration only.
+
+For Windows, we create a virtual environment with the following code.
+python -m venv env
+
+The 'env' argument is the path of the folder. In this case, the venv is created in a new folder named 'env' where this command is executed. A tip for colaborating with others with git is to exclude this directory with '.gitignore'.
+
+After creating the venv 'env', we activate it. 
+.\env\Scripts\activate
+
+To confirm, execute the command:
+where python
+It should print the 'env' folder path.
+
+Next, install all the packages necessary for the project, such as MatPlotLib, Pandas, and so on. Then, run the file within this environment.
+
+To switch of projects or quit the venv, type and run:
+deactivate
+
+Source: 
+https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment

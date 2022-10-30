@@ -1,0 +1,6 @@
+List every file in the working directory.
+
+File file = new File(".");
+for (String fileNames : file.list()) System.out.println(fileNames);
+
+System.out.println("Working dir: " + System.getProperty("user.dir"));

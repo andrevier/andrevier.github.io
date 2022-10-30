@@ -1,0 +1,69 @@
+Testing user input for console apps in JUnit. 
+
+We have a console app and we would like to test user inputs and the app behavior. In the main code, this input is often requested by the Scanner class that parse the input string at some point in the code. 
+
+The "System" class has a static instance variable "in" that represents the standard input stream (input from the keyboard), while the variable "out" represents the standard output stream. One of the options to make tests is to reassign these streams. 
+
+I use Netbeans 15 for this tutorial. First, we create a new project of "Java with Maven" and name it as Example. The main file is in the Mypack package. So, we have the following files:
+
+Example
+- Source Packages
+-- Mypack
+--- Example.java
+
+The main file looks like this:
+
+""" Java
+package Mypack;
+
+public class Example {
+
+    public static void main(String[] args) {
+        
+    }
+}
+"""
+
+First, we need the Scanner class to read user inputs.
+
+"""
+package Mypack;
+
+import java.util.Scanner;
+
+public class Example {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("What is your name?");
+        String firstName = scan.nextLine();
+
+        System.out.println("What is your email?");
+        String lastName = scan.nextLine();
+        
+        System.out.println(firstName + "," + email);
+    }
+}
+"""
+
+Output:
+""" Console
+>What is your name?
+>Andre
+>What is your email?
+>andrevier@outlook.com
+>Andre,andrevier@outlook
+"""
+
+Now, we click with the right button in the project name and choose new -> JUnit test. We name it as ExampleJUnitTest and create it inside the TestMypack package.
+
+Example
+- Source Packages
+-- Mypack
+--- Example.java
+- Test Packages
+-- TestMypack
+--- ExampleJUnitTest.java
+
+The test 
